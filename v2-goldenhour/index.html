@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>document.documentElement.classList.add("js")</script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hill Krest Farm and Events | Wedding &amp; Event Venue in New Plymouth, Idaho</title>
+<meta name="description" content="A red barn, a string of lights and a Payette County sunset. Hill Krest Farm and Events is a working farm in New Plymouth, Idaho, open for weddings, receptions and gatherings.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="../brand_assets/logos/web/favicon-goldenhour.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        night:    '#19140F',
+        raised:   '#221B14',
+        float:    '#2C241B',
+        cream:    '#F3ECE0',
+        'cream-mid':'#C3B6A3',
+        'cream-dim':'#8C8172',
+        bronze:   '#A8814F',
+        amber:    '#D2984F',
+        line:     'rgba(243,236,224,.14)',
+      },
+      fontFamily: {
+        display: ['Prata', 'Georgia', 'serif'],
+        body:    ['Inter', 'system-ui', 'sans-serif'],
+      },
+      maxWidth: { reading: '36rem' },
+    }
+  }
+}
+</script>
+<style>
+  :root{
+    --s-4:2.5rem; --s-5:4rem; --s-6:6.5rem; --s-7:9rem;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  html{ scroll-behavior:smooth; background:#19140F; }
+  body{ background:#19140F; color:#F3ECE0; font-family:Inter,system-ui,sans-serif; font-weight:300; }
+
+  .grain{
+    position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.55;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");
+  }
+
+  h1,h2,h3,.display{ font-family:Prata,Georgia,serif; font-weight:400; letter-spacing:-.01em; text-wrap:balance; }
+  .h-xl{ font-size:clamp(2.25rem,6.2vw,5rem); line-height:1.04; letter-spacing:-.025em; }
+  .h-lg{ font-size:clamp(1.875rem,3.8vw,2.875rem); line-height:1.12; letter-spacing:-.02em; }
+  .h-md{ font-size:clamp(1.25rem,2vw,1.5rem); line-height:1.25; letter-spacing:-.01em; }
+  .lede{ font-size:clamp(1.0625rem,1.4vw,1.1875rem); line-height:1.75; text-wrap:pretty; }
+  p{ line-height:1.75; }
+
+  .hair{ height:1px; background:rgba(243,236,224,.14); border:0; }
+  .rule-short{ width:3rem; height:1px; background:#A8814F; border:0; }
+
+  .tbd{
+    font-family:Inter,sans-serif; font-size:.85em; font-weight:400;
+    color:#D2984F; border-bottom:1px dashed rgba(210,152,79,.5);
+    padding:.05em .1em; white-space:nowrap;
+  }
+  .tbd-block{
+    display:block; font-style:italic; color:#D2984F;
+    border-left:1px dashed rgba(210,152,79,.4); padding-left:1rem;
+  }
+
+  .img-wrap{ position:relative; overflow:hidden; background:#221B14; }
+  .img-wrap img{ display:block; width:100%; height:100%; object-fit:cover;
+                 filter:saturate(.86) contrast(1.03);
+                 transform:scale(1.001); transition:transform 1s var(--ease); }
+  .img-wrap::after{
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(to top, rgba(14,11,8,.72), rgba(14,11,8,.12) 58%);
+  }
+  .img-tone::before{
+    content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:#8A6A44; mix-blend-mode:multiply; opacity:.30;
+  }
+  .card:hover .img-wrap img{ transform:scale(1.05); }
+  /* The drone frames are daylight green and fight the warm dark palette */
+  .img-cool img{ filter:saturate(.5) sepia(.22) contrast(1.05) brightness(.92); }
+  .img-cool::before{ opacity:.46; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    font-family:Inter,sans-serif; font-weight:400; font-size:.75rem;
+    letter-spacing:.16em; text-transform:uppercase;
+    padding:1.0625rem 2.25rem; border-radius:1px; border:1px solid transparent;
+    transition:transform .35s var(--ease), opacity .35s var(--ease), background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
+  }
+  .btn-solid{ background:#D2984F; color:#19140F; font-weight:500;
+              box-shadow:0 2px 4px rgba(0,0,0,.4), 0 16px 32px -20px rgba(0,0,0,.8); }
+  .btn-solid:hover{ background:#E0A860; transform:translateY(-2px); }
+  .btn-solid:active{ transform:translateY(0); }
+  .btn-ghost{ border-color:rgba(243,236,224,.3); color:#F3ECE0; }
+  .btn-ghost:hover{ border-color:#D2984F; color:#D2984F; transform:translateY(-2px); }
+  .btn-ghost:active{ transform:translateY(0); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible{ outline:2px solid #D2984F; outline-offset:3px; }
+
+  .navlink{ position:relative; font-size:.75rem; letter-spacing:.16em; text-transform:uppercase;
+            color:#C3B6A3; padding:.35rem 0; transition:color .3s var(--ease); }
+  .navlink::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:1px;
+                   background:#D2984F; transform:scaleX(0); transform-origin:left;
+                   transition:transform .4s var(--ease); }
+  .navlink:hover{ color:#F3ECE0; }
+  .navlink:hover::after{ transform:scaleX(1); }
+
+  #siteHeader{ transition:background-color .5s var(--ease), border-color .5s var(--ease); }
+  #siteHeader.solid{ background:rgba(25,20,15,.94); backdrop-filter:blur(10px);
+                     border-bottom:1px solid rgba(243,236,224,.14); }
+
+  .field{
+    width:100%; background:#19140F; border:1px solid rgba(243,236,224,.18); border-radius:1px;
+    padding:.95rem 1rem; font-family:Inter,sans-serif; font-weight:300; font-size:.9375rem; color:#F3ECE0;
+    transition:border-color .3s var(--ease);
+  }
+  .field::placeholder{ color:#6F6657; }
+  .field:hover{ border-color:rgba(243,236,224,.34); }
+  .field:focus{ border-color:#D2984F; outline:none; box-shadow:0 0 0 1px #D2984F; }
+  .label{ display:block; font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase;
+          color:#8C8172; margin-bottom:.5rem; }
+  select.field option{ background:#221B14; color:#F3ECE0; }
+
+  .js .rise{ opacity:0; transform:translateY(20px); }
+  .rise.in{ opacity:1; transform:none;
+            transition:opacity 1s var(--ease), transform 1s var(--ease); }
+  @media (prefers-reduced-motion:reduce){
+    .js .rise,.rise.in{ opacity:1; transform:none; transition:none; }
+    .img-wrap img{ transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body class="antialiased">
+<div class="grain" aria-hidden="true"></div>
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[70] focus:top-3 focus:left-3 focus:bg-amber focus:text-night focus:px-4 focus:py-2">Skip to content</a>
+
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="flex items-center justify-between py-5">
+      <a href="#top" aria-label="Hill Krest Farm and Events, home">
+        <img src="../brand_assets/logos/web/wordmark-cream.png" alt="Hill Krest Farm and Events" class="h-9 sm:h-11 w-auto">
+      </a>
+      <nav class="hidden lg:flex items-center gap-9" aria-label="Primary">
+        <a href="#property" class="navlink">The Property</a>
+        <a href="#included" class="navlink">What's Included</a>
+        <a href="#planning" class="navlink">Pricing</a>
+        <a href="#gallery" class="navlink">Gallery</a>
+        <a href="#inquire" class="btn btn-ghost !py-3 !px-6">Check your date</a>
+      </nav>
+      <button id="navToggle" class="lg:hidden btn btn-ghost !py-2.5 !px-4" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+    </div>
+    <nav id="mobileNav" class="lg:hidden hidden pb-6" aria-label="Primary">
+      <ul class="flex flex-col gap-1">
+        <li><a href="#property" class="navlink block py-2.5">The Property</a></li>
+        <li><a href="#included" class="navlink block py-2.5">What's Included</a></li>
+        <li><a href="#planning" class="navlink block py-2.5">Pricing</a></li>
+        <li><a href="#gallery"  class="navlink block py-2.5">Gallery</a></li>
+        <li class="pt-3"><a href="#inquire" class="btn btn-solid w-full">Check your date</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- Hero: full bleed, type over image -->
+<section class="relative min-h-[88svh] lg:min-h-[94svh] flex items-end overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="img-wrap img-tone h-full w-full">
+      <img src="../images/hero-dusk.webp"
+           srcset="../images/hero-dusk-700.webp 700w, ../images/hero-dusk-1000.webp 1000w, ../images/hero-dusk.webp 1440w"
+           sizes="100vw"
+           alt="The red barn at Hill Krest lit from inside at dusk, string lights overhead and guests gathered outside"
+           width="1440" height="810" fetchpriority="high">
+    </div>
+    <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(14,11,8,.9) 0%, rgba(14,11,8,.3) 48%, rgba(14,11,8,.34) 100%)"></div>
+    <div class="absolute inset-0 hidden lg:block" style="background:linear-gradient(to right, rgba(14,11,8,.78) 0%, rgba(14,11,8,.34) 38%, rgba(14,11,8,0) 62%)"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-[80rem] w-full px-6 lg:px-10 pb-[var(--s-6)] pt-40">
+    <div class="max-w-[44rem]">
+      <h1 class="h-xl rise">The light here does half the work.</h1>
+      <p class="lede text-cream-mid mt-7 max-w-reading rise">
+        A red barn, a string of lights and a Payette County sunset. Hill Krest is a working
+        farm in New Plymouth, Idaho, open for weddings, receptions and gatherings of
+        every size.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-3 rise">
+        <a href="#inquire" class="btn btn-solid">Check your date</a>
+        <a href="#property" class="btn btn-ghost">See the property</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="py-[var(--s-6)]">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-24 items-start">
+      <h2 class="h-lg rise">You are not renting a ballroom.<br>You are renting a piece of ground.</h2>
+      <div class="rise">
+        <p class="lede text-cream-mid">
+          <span class="tbd">Owner name</span> has farmed here for
+          <span class="tbd">number of years</span>, and opened the barn to weddings in
+          <span class="tbd">year</span>.
+        </p>
+        <p class="lede text-cream-mid mt-5">
+          <span class="tbd-block">Two or three sentences in the owner's own words about why
+          they started hosting, and what they want a day here to feel like.</span>
+        </p>
+        <p class="lede text-cream-mid mt-5">
+          What comes with it is the cottonwood line along the ditch, fields that turn gold in
+          October, and a sky that does most of the decorating for you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Property: alternating full-width rows -->
+<section id="property" class="pb-[var(--s-5)]">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <h2 class="h-lg max-w-[34rem] rise">Three spaces, one afternoon</h2>
+    <hr class="rule-short my-8 rise">
+  </div>
+
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10 space-y-5 lg:space-y-6">
+    <article class="card grid lg:grid-cols-2 gap-px bg-line border border-line rise">
+      <div class="img-wrap img-tone img-cool aspect-[16/10] lg:aspect-auto lg:min-h-[26rem]">
+        <img src="../images/ceremony-aerial.webp" srcset="../images/ceremony-aerial-600.webp 600w, ../images/ceremony-aerial.webp 900w" sizes="(max-width:1024px) 100vw, 40rem" alt="Aerial view of the ceremony lawn with rows of white chairs facing the tree line" width="900" height="675" loading="lazy">
+      </div>
+      <div class="bg-raised p-8 lg:p-12 flex flex-col justify-center">
+        <h3 class="h-md">The ceremony lawn</h3>
+        <p class="text-cream-mid mt-4">
+          Open grass with the tree line behind it, set for up to
+          <span class="tbd">outdoor capacity</span> guests. Chairs face
+          <span class="tbd">direction</span>, so the late sun lands behind the camera
+          instead of in your guests' eyes.
+        </p>
+      </div>
+    </article>
+
+    <article class="card grid lg:grid-cols-2 gap-px bg-line border border-line rise">
+      <div class="bg-raised p-8 lg:p-12 flex flex-col justify-center lg:order-1 order-2">
+        <h3 class="h-md">The barn hall</h3>
+        <p class="text-cream-mid mt-4">
+          Open trusses, string lights and a chandelier, seating
+          <span class="tbd">indoor capacity</span> at tables. Heated, which is why a
+          November wedding works here as well as a June one.
+        </p>
+      </div>
+      <div class="img-wrap img-tone aspect-[16/10] lg:aspect-auto lg:min-h-[26rem] lg:order-2 order-1">
+        <img src="../images/hall-evening.webp" srcset="../images/hall-evening-800.webp 800w, ../images/hall-evening.webp 1200w" sizes="(max-width:1024px) 100vw, 40rem" alt="Inside the barn hall with open trusses, a chandelier and a long table set for dinner" width="1200" height="900" loading="lazy">
+      </div>
+    </article>
+
+    <article class="card grid lg:grid-cols-2 gap-px bg-line border border-line rise">
+      <div class="img-wrap img-tone aspect-[16/10] lg:aspect-auto lg:min-h-[26rem]">
+        <img src="../images/barn-tents.webp" srcset="../images/barn-tents-700.webp 700w, ../images/barn-tents.webp 1100w" sizes="(max-width:1024px) 100vw, 40rem" alt="White frame tents set up beside the red barn under autumn cottonwoods" width="1100" height="767" loading="lazy">
+      </div>
+      <div class="bg-raised p-8 lg:p-12 flex flex-col justify-center">
+        <h3 class="h-md">The tented yard</h3>
+        <p class="text-cream-mid mt-4">
+          Frame tents on the gravel between the barn and the lawn, for dinner service, a bar,
+          or somewhere shaded to sit out the hottest part of the afternoon.
+          <span class="tbd">Included or priced separately</span>.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Included -->
+<section id="included" class="py-[var(--s-6)]">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="flex flex-wrap items-end justify-between gap-6 rise">
+      <h2 class="h-lg max-w-[34rem]">What comes with the day</h2>
+      <a href="#inquire" class="btn btn-ghost">Ask about a date</a>
+    </div>
+    <hr class="hair my-10 rise">
+
+    <dl class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-2 rise">
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Tables and chairs</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd">Count and type</span>. Rounds, banquet tables and white folding chairs are on site.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Frame tents</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd">Included or extra</span>, and <span class="tbd">sizes</span>.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Heat and lighting</dt>
+        <dd class="text-cream-mid mt-3">Patio heaters, string lights through the barn and across the yard, power at <span class="tbd">locations</span>.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Parking</dt>
+        <dd class="text-cream-mid mt-3">Gravel lot on site for <span class="tbd">vehicle count</span> vehicles.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Restrooms</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd">Permanent or portable, and how many</span>.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Getting ready</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd-block">Is there a space for the wedding party, and what is in it.</span></dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Catering</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd">Any caterer, preferred list, or in-house</span>.</dd>
+      </div>
+      <div class="py-6 border-t border-line">
+        <dt class="h-md">Alcohol</dt>
+        <dd class="text-cream-mid mt-3"><span class="tbd">Policy, and whether a licensed bartender is required</span>.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="planning" class="py-[var(--s-6)] bg-raised border-y border-line">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="max-w-[40rem] rise">
+      <h2 class="h-lg">Dates and pricing</h2>
+      <hr class="rule-short my-8">
+      <p class="lede text-cream-mid">Straight numbers, so you know early whether we are the right fit.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-[var(--s-5)] rise">
+      <div class="bg-float border border-line p-8">
+        <p class="display text-[2.5rem] leading-none text-amber">$<span class="tbd">0,000</span></p>
+        <p class="text-cream-mid mt-4">Full weekend wedding, <span class="tbd">days and hours</span>.</p>
+      </div>
+      <div class="bg-float border border-line p-8">
+        <p class="display text-[2.5rem] leading-none text-amber">$<span class="tbd">0,000</span></p>
+        <p class="text-cream-mid mt-4">Single Saturday, <span class="tbd">hours</span>.</p>
+      </div>
+      <div class="bg-float border border-line p-8">
+        <p class="display text-[2.5rem] leading-none text-amber">$<span class="tbd">000</span></p>
+        <p class="text-cream-mid mt-4">Weekday and off-season events.</p>
+      </div>
+      <div class="bg-float border border-line p-8">
+        <p class="display text-[2.5rem] leading-none text-amber"><span class="tbd">000</span></p>
+        <p class="text-cream-mid mt-4">Guests seated indoors, <span class="tbd">000</span> on the lawn.</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10 lg:gap-14 mt-[var(--s-5)] rise">
+      <div>
+        <h3 class="h-md">Holding a date</h3>
+        <p class="text-cream-mid mt-4"><span class="tbd-block">Deposit amount, whether it is refundable, and what the balance schedule looks like.</span></p>
+      </div>
+      <div>
+        <h3 class="h-md">If it rains</h3>
+        <p class="text-cream-mid mt-4"><span class="tbd-block">What happens to an outdoor ceremony when the weather turns, and when that call gets made.</span></p>
+      </div>
+      <div>
+        <h3 class="h-md">House rules</h3>
+        <p class="text-cream-mid mt-4"><span class="tbd-block">Music curfew, open flame, sparklers, decor limits, clean-up and insurance.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-[var(--s-6)]">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="flex flex-wrap items-end justify-between gap-6 rise">
+      <h2 class="h-lg">The place itself</h2>
+      <p class="text-cream-dim text-sm max-w-[24rem]">
+        <span class="tbd">More photography to come from the farm</span>, including the hall
+        empty in daylight and the getting-ready space.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[86rem] px-6 lg:px-10 mt-[var(--s-4)]">
+    <div class="grid grid-cols-12 gap-4 lg:gap-5">
+      <div class="img-wrap img-tone col-span-12 lg:col-span-7 aspect-[16/10] rise">
+        <img src="../images/hero-golden.webp" srcset="../images/hero-golden-800.webp 800w, ../images/hero-golden-1400.webp 1400w, ../images/hero-golden.webp 2000w" sizes="(max-width:1024px) 100vw, 48rem" alt="The red barn with white frame tents and autumn cottonwoods at sunset" width="2000" height="1125" loading="lazy">
+      </div>
+      <div class="img-wrap img-tone col-span-12 lg:col-span-5 aspect-[16/10] lg:aspect-auto rise">
+        <img src="../images/dusk-portrait.webp" srcset="../images/dusk-portrait-640.webp 640w, ../images/dusk-portrait.webp 1000w" sizes="(max-width:1024px) 100vw, 34rem" alt="Guests outside the barn under string lights at dusk" width="1000" height="1250" loading="lazy">
+      </div>
+      <div class="img-wrap img-tone col-span-6 lg:col-span-4 aspect-[4/3] rise">
+        <img src="../images/hall-tablescape.webp" srcset="../images/hall-tablescape-600.webp 600w, ../images/hall-tablescape.webp 800w" sizes="(max-width:1024px) 50vw, 27rem" alt="A long table set for dinner inside the barn with a wooden arch behind it" width="800" height="460" loading="lazy">
+      </div>
+      <div class="img-wrap img-tone col-span-6 lg:col-span-4 aspect-[4/3] rise">
+        <img src="../images/hall-rounds.webp" srcset="../images/hall-rounds-900.webp 900w, ../images/hall-rounds.webp 1440w" sizes="(max-width:1024px) 50vw, 27rem" alt="Round tables dressed in white linen set inside the barn hall" width="1440" height="810" loading="lazy">
+      </div>
+      <div class="img-wrap img-tone img-cool col-span-12 lg:col-span-4 aspect-[4/3] rise">
+        <img src="../images/aerial-1000.webp" srcset="../images/aerial-640.webp 640w, ../images/aerial-1000.webp 1000w" sizes="(max-width:1024px) 100vw, 27rem" alt="Aerial view of the farm showing the ceremony lawn, tented reception and barn" width="1000" height="667" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="py-[var(--s-6)] bg-raised border-y border-line">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="max-w-[46rem] mx-auto text-center rise">
+      <h2 class="h-lg">What people say afterwards</h2>
+      <hr class="rule-short my-8 mx-auto">
+      <p class="lede"><span class="tbd-block" style="border-left:0;padding-left:0">Three to five real reviews go here, with a first name, last initial and event type. Nothing invented will be published in this space.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Inquire -->
+<section id="inquire" class="py-[var(--s-6)]">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10">
+    <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20">
+      <div class="rise">
+        <h2 class="h-lg">Come walk the place</h2>
+        <hr class="rule-short my-8">
+        <p class="lede text-cream-mid max-w-reading">
+          Tell us the date you have in mind and roughly how many people. We will tell you
+          straight away whether it is open, and what a day here would run.
+        </p>
+        <dl class="mt-10 space-y-6">
+          <div>
+            <dt class="text-sm text-cream-dim">Call or text</dt>
+            <dd class="h-md mt-1"><a href="tel:" class="hover:text-amber transition-colors"><span class="tbd">(000) 000-0000</span></a></dd>
+          </div>
+          <div>
+            <dt class="text-sm text-cream-dim">Email</dt>
+            <dd class="h-md mt-1"><a href="mailto:" class="hover:text-amber transition-colors"><span class="tbd">email address</span></a></dd>
+          </div>
+          <div>
+            <dt class="text-sm text-cream-dim">Where we are</dt>
+            <dd class="h-md mt-1"><span class="tbd">Street address</span>, New Plymouth, Idaho</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="rise">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+              class="bg-raised border border-line p-7 sm:p-10"
+              style="box-shadow:0 2px 4px rgba(0,0,0,.4), 0 32px 64px -40px rgba(0,0,0,.9)">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="label" for="g-name">Your name</label>
+              <input class="field" type="text" id="g-name" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label class="label" for="g-phone">Phone</label>
+              <input class="field" type="tel" id="g-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="label" for="g-email">Email</label>
+              <input class="field" type="email" id="g-email" name="email" required autocomplete="email">
+            </div>
+            <div>
+              <label class="label" for="g-type">Type of event</label>
+              <select class="field" id="g-type" name="event_type">
+                <option>Wedding</option>
+                <option>Reception only</option>
+                <option>Reunion or family gathering</option>
+                <option>Corporate or community event</option>
+                <option>Celebration of life</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div>
+              <label class="label" for="g-date">Date you have in mind</label>
+              <input class="field" type="date" id="g-date" name="preferred_date">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="label" for="g-guests">Roughly how many guests</label>
+              <input class="field" type="number" min="1" id="g-guests" name="guest_count" placeholder="150">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="label" for="g-msg">Anything else</label>
+              <textarea class="field" id="g-msg" name="message" rows="4" placeholder="Tell us what you are picturing."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-solid w-full mt-7">Send the inquiry</button>
+          <p class="text-xs text-cream-dim mt-4"><span class="tbd">Form needs a Formspree ID before it will deliver.</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-line">
+  <div class="mx-auto max-w-[80rem] px-6 lg:px-10 py-[var(--s-5)]">
+    <div class="grid md:grid-cols-[1.2fr_1fr_1fr] gap-10 lg:gap-16">
+      <div>
+        <img src="../brand_assets/logos/web/wordmark-cream.png" alt="Hill Krest Farm and Events" class="h-10 w-auto">
+        <p class="text-cream-dim text-sm mt-6 max-w-[22rem]">
+          A working farm in New Plymouth, Idaho, open for weddings, receptions and
+          gatherings of every size.
+        </p>
+      </div>
+      <div>
+        <p class="text-sm text-cream-dim">Visit</p>
+        <ul class="mt-4 space-y-2.5 text-cream-mid">
+          <li><span class="tbd">Street address</span></li>
+          <li>New Plymouth, Idaho</li>
+          <li class="pt-2"><a href="tel:" class="hover:text-cream transition-colors"><span class="tbd">(000) 000-0000</span></a></li>
+          <li><a href="mailto:" class="hover:text-cream transition-colors"><span class="tbd">email address</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm text-cream-dim">Elsewhere</p>
+        <ul class="mt-4 space-y-2.5 text-cream-mid">
+          <li><a href="#" class="hover:text-cream transition-colors">Instagram <span class="tbd">handle</span></a></li>
+          <li><a href="#" class="hover:text-cream transition-colors">Facebook <span class="tbd">handle</span></a></li>
+          <li><a href="#" class="hover:text-cream transition-colors">Google reviews <span class="tbd">link</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="hair my-10">
+    <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-cream-dim">
+      <p>&copy; <span id="yr">2026</span> Hill Krest Farm and Events</p>
+      <p>Site by <a href="https://theatlasagency.ai" class="hover:text-cream transition-colors">Atlas Marketing Agency</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var toggle = document.getElementById('navToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  toggle.addEventListener('click', function () {
+    var open = mobileNav.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Close' : 'Menu';
+  });
+  mobileNav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      mobileNav.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = 'Menu';
+    }
+  });
+
+  var header = document.getElementById('siteHeader');
+  var onScroll = function () { header.classList.toggle('solid', window.scrollY > 40); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var revealAll = function () {
+    document.querySelectorAll('.rise').forEach(function (el) { el.classList.add('in'); });
+  };
+  if (!('IntersectionObserver' in window)) { revealAll(); }
+  window.addEventListener('load', function () { setTimeout(revealAll, 1400); });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .05 });
+  document.querySelectorAll('.rise').forEach(function (el, i) {
+    el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>

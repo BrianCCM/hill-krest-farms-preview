@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hill Krest Farm and Events | Three Design Directions</title>
+<meta name="description" content="Three homepage directions for Hill Krest Farm and Events to choose from.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="brand_assets/logos/web/favicon-heirloom.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#2B2E20','ink-mid':'#5A5F4C','ink-dim':'#8A8F7C',
+            paper:'#F6F2EA', surface:'#FBF8F2', line:'#DED6C6', clay:'#A8705A' },
+  fontFamily: { display:['"Cormorant Garamond"','Georgia','serif'], body:['Jost','system-ui','sans-serif'] }
+}}}
+</script>
+<style>
+  html{ scroll-behavior:smooth; }
+  body{ background:#F6F2EA; color:#2B2E20; font-family:Jost,system-ui,sans-serif; }
+  h1,h2,h3{ font-family:"Cormorant Garamond",Georgia,serif; font-weight:300; letter-spacing:-.025em; text-wrap:balance; }
+  .h-xl{ font-size:clamp(2.5rem,5.5vw,4rem); line-height:1.05; }
+  .h-lg{ font-size:clamp(1.75rem,3vw,2.25rem); line-height:1.12; }
+  .h-md{ font-size:clamp(1.25rem,2vw,1.5rem); line-height:1.25; }
+  p{ line-height:1.7; text-wrap:pretty; }
+  .grain{ position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.5; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E"); }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+        font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
+        padding:1rem 2rem; border-radius:1px; border:1px solid transparent;
+        transition:transform .35s cubic-bezier(.22,1,.36,1), background-color .35s cubic-bezier(.22,1,.36,1), border-color .35s cubic-bezier(.22,1,.36,1), color .35s cubic-bezier(.22,1,.36,1); }
+  .btn-solid{ background:#2B2E20; color:#F6F2EA; box-shadow:0 1px 2px rgba(20,18,12,.10), 0 10px 24px -14px rgba(20,18,12,.45); }
+  .btn-solid:hover{ background:#3A3E2C; transform:translateY(-2px); }
+  .btn-solid:active{ transform:translateY(0); }
+  .btn-ghost{ border-color:#C9BFA8; color:#2B2E20; }
+  .btn-ghost:hover{ border-color:#2B2E20; transform:translateY(-2px); }
+  .btn-ghost:active{ transform:translateY(0); }
+  a:focus-visible,.btn:focus-visible{ outline:2px solid #2B2E20; outline-offset:3px; }
+  .shot{ position:relative; overflow:hidden; background:#E7E0D2; border:1px solid #DED6C6;
+         box-shadow:0 1px 2px rgba(20,18,12,.06), 0 20px 44px -30px rgba(20,18,12,.45); }
+  .shot img{ display:block; width:100%; height:auto;
+             transition:transform .7s cubic-bezier(.22,1,.36,1); }
+  .card:hover .shot img{ transform:scale(1.03); }
+  .swatch{ width:1.5rem; height:1.5rem; border-radius:50%; border:1px solid rgba(43,46,32,.18); }
+  .rule{ height:1px; background:#DED6C6; border:0; }
+</style>
+</head>
+<body class="antialiased">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="pt-14 pb-10">
+  <div class="mx-auto max-w-[74rem] px-6 lg:px-10 text-center">
+    <img src="brand_assets/logos/web/br-arbor-dark.png" alt="Hill Krest Farm and Events" class="h-24 w-auto mx-auto">
+  </div>
+</header>
+
+<main>
+<section class="pb-[4rem]">
+  <div class="mx-auto max-w-[74rem] px-6 lg:px-10">
+    <div class="max-w-[46rem] mx-auto text-center">
+      <h1 class="h-xl">Three directions for the website</h1>
+      <p class="text-ink-mid mt-7">
+        Same content, same photographs, three different personalities. Open each one, scroll
+        the whole page, and tell us which feels most like the farm. We will build the rest of
+        the site in whichever you pick.
+      </p>
+      <p class="text-ink-mid mt-5">
+        Nothing here is final. Everything marked in
+        <span style="color:#9A7257;border-bottom:1px dashed rgba(154,114,87,.5)">this colour</span>
+        is a placeholder waiting on information from you, and no number, review or policy on
+        these pages is real.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="pb-[5rem]">
+  <div class="mx-auto max-w-[74rem] px-6 lg:px-10 space-y-16 lg:space-y-24">
+
+    <article class="card">
+      <a href="v1-heirloom/index.html" class="block shot" aria-label="Open the Heirloom direction">
+        <img src="images/previews/thumb-heirloom.webp" alt="Heirloom direction: ivory page with a centred serif headline and a wide sunset photograph" width="900" height="738" loading="lazy">
+      </a>
+      <div class="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 mt-8">
+        <div>
+          <h2 class="h-lg">One. Heirloom</h2>
+          <div class="flex items-center gap-2 mt-5">
+            <span class="swatch" style="background:#F6F2EA"></span>
+            <span class="swatch" style="background:#353827"></span>
+            <span class="swatch" style="background:#8A9178"></span>
+            <span class="swatch" style="background:#A8705A"></span>
+          </div>
+          <a href="v1-heirloom/index.html" class="btn btn-solid mt-7">Open Heirloom</a>
+        </div>
+        <div>
+          <p class="text-ink-mid">
+            The quiet one. Ivory paper, deep olive green and a lot of open space, with the
+            headline set large and light in the middle of the page. It reads like the front of
+            a wedding magazine, and it is the direction that most says this venue is worth
+            paying for.
+          </p>
+          <p class="text-ink-mid mt-4">
+            Uses the arbor and botanical logo. Best if you want couples planning a dressy,
+            considered wedding. Least obviously country of the three.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <hr class="rule">
+
+    <article class="card">
+      <a href="v2-goldenhour/index.html" class="block shot" aria-label="Open the Golden Hour direction">
+        <img src="images/previews/thumb-goldenhour.webp" alt="Golden Hour direction: dark page with the barn at dusk filling the screen behind the headline" width="900" height="738" loading="lazy">
+      </a>
+      <div class="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 mt-8">
+        <div>
+          <h2 class="h-lg">Two. Golden Hour</h2>
+          <div class="flex items-center gap-2 mt-5">
+            <span class="swatch" style="background:#19140F"></span>
+            <span class="swatch" style="background:#D2984F"></span>
+            <span class="swatch" style="background:#A8814F"></span>
+            <span class="swatch" style="background:#F3ECE0"></span>
+          </div>
+          <a href="v2-goldenhour/index.html" class="btn btn-solid mt-7">Open Golden Hour</a>
+        </div>
+        <div>
+          <p class="text-ink-mid">
+            The emotional one. Dark and warm, built around the photograph of the barn lit up at
+            dusk, which fills the whole screen before you read a word. Amber accents, and every
+            photo graded to the same evening warmth.
+          </p>
+          <p class="text-ink-mid mt-4">
+            Uses the plain bronze wordmark, so nothing competes with the pictures. This is the
+            direction that performs best when someone finds you on a phone through Instagram.
+            It leans hardest on photography, so it has the most to gain from better photos.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <hr class="rule">
+
+    <article class="card">
+      <a href="v3-homestead/index.html" class="block shot" aria-label="Open the Homestead direction">
+        <img src="images/previews/thumb-homestead.webp" alt="Homestead direction: cream page with a bold headline beside the barn photograph and a row of capacity figures" width="900" height="738" loading="lazy">
+      </a>
+      <div class="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 mt-8">
+        <div>
+          <h2 class="h-lg">Three. Homestead</h2>
+          <div class="flex items-center gap-2 mt-5">
+            <span class="swatch" style="background:#F2ECE2"></span>
+            <span class="swatch" style="background:#A6442E"></span>
+            <span class="swatch" style="background:#6B5742"></span>
+            <span class="swatch" style="background:#2A2219"></span>
+          </div>
+          <a href="v3-homestead/index.html" class="btn btn-solid mt-7">Open Homestead</a>
+        </div>
+        <div>
+          <p class="text-ink-mid">
+            The friendly one. Cream and barn red, heavier type, visible borders and boxes, and
+            your capacity numbers right under the headline where nobody has to hunt for them.
+            Warmest and most direct of the three.
+          </p>
+          <p class="text-ink-mid mt-4">
+            Uses the barn illustration logo. Best if you want reunions, company dinners and
+            community events as much as weddings, because it reads as welcoming rather than
+            exclusive.
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="py-[4rem] bg-surface border-y border-line">
+  <div class="mx-auto max-w-[74rem] px-6 lg:px-10">
+    <div class="max-w-[46rem]">
+      <h2 class="h-lg">What is still missing</h2>
+      <p class="text-ink-mid mt-5">
+        Every direction is running on the same placeholder content, because we would rather
+        leave an honest blank than invent something you have to walk back later. To finish the
+        one you choose we need:
+      </p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 mt-10">
+      <div>
+        <h3 class="h-md">Capacity</h3>
+        <p class="text-ink-mid mt-2">Seated indoors, on the ceremony lawn, and the site total.</p>
+      </div>
+      <div>
+        <h3 class="h-md">Pricing</h3>
+        <p class="text-ink-mid mt-2">Even a starting-at figure. Venue shoppers filter on price first, and a page with no number gets skipped rather than emailed.</p>
+      </div>
+      <div>
+        <h3 class="h-md">What is included</h3>
+        <p class="text-ink-mid mt-2">Tables, chairs, tents, heaters, restrooms, parking and whether there is a getting-ready space.</p>
+      </div>
+      <div>
+        <h3 class="h-md">Policies</h3>
+        <p class="text-ink-mid mt-2">Alcohol, catering, music curfew, open flame, the rain plan and clean-up.</p>
+      </div>
+      <div>
+        <h3 class="h-md">Contact</h3>
+        <p class="text-ink-mid mt-2">Phone, email, address, and your Instagram and Facebook.</p>
+      </div>
+      <div>
+        <h3 class="h-md">Real reviews</h3>
+        <p class="text-ink-mid mt-2">Three to five, with a first name and event type. Screenshots are fine. Nothing invented goes in that space.</p>
+      </div>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <hr class="rule my-2">
+      </div>
+      <div class="sm:col-span-2 lg:col-span-3">
+        <h3 class="h-md">More photographs</h3>
+        <p class="text-ink-mid mt-2 max-w-[44rem]">
+          This is the one that will change how the site looks more than any design decision.
+          There are six phone photos to work with and guests are visible in nearly all of them.
+          The most useful things you could send: the hall empty and clean in daylight, the
+          ceremony lawn with chairs set and nobody in them, the getting-ready space, and close
+          detail shots of the arch, the chandelier and a set table. Best of all, ask a past
+          couple for their professional wedding photos. That costs one text message and those
+          images would be the best thing on the site.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="py-12">
+  <div class="mx-auto max-w-[74rem] px-6 lg:px-10 flex flex-wrap items-center justify-between gap-4 text-sm text-ink-dim">
+    <p>Hill Krest Farm and Events, New Plymouth, Idaho</p>
+    <p>Prepared by <a href="https://theatlasagency.ai" class="hover:text-ink transition-colors">Atlas Marketing Agency</a></p>
+  </div>
+</footer>
+</body>
+</html>
