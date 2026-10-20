@@ -98,6 +98,13 @@ tailwind.config = {
   .btn-solid{ background:#2B2E20; color:#F6F2EA; box-shadow:0 1px 2px rgba(20,18,12,.10), 0 10px 24px -14px rgba(20,18,12,.45); }
   .btn-solid:hover{ background:#3A3E2C; transform:translateY(-2px); }
   .btn-solid:active{ transform:translateY(0); }
+  .btn-cream{ background:#F6F2EA; color:#2B2E20;
+              box-shadow:0 2px 4px rgba(10,8,5,.28), 0 16px 32px -20px rgba(10,8,5,.6); }
+  .btn-cream:hover{ background:#FFFDF8; transform:translateY(-2px); }
+  .btn-cream:active{ transform:translateY(0); }
+  .btn-outline-cream{ border-color:rgba(246,242,234,.5); color:#F6F2EA; }
+  .btn-outline-cream:hover{ border-color:#F6F2EA; background:rgba(246,242,234,.1); transform:translateY(-2px); }
+  .btn-outline-cream:active{ transform:translateY(0); }
   .btn-ghost{ border-color:#C9BFA8; color:#2B2E20; }
   .btn-ghost:hover{ border-color:#2B2E20; transform:translateY(-2px); }
   .btn-ghost:active{ transform:translateY(0); }
@@ -105,6 +112,9 @@ tailwind.config = {
   select:focus-visible, textarea:focus-visible{
     outline:2px solid #2B2E20; outline-offset:3px;
   }
+  .on-photo .btn:focus-visible, .on-photo a:focus-visible{ outline-color:#F6F2EA; }
+  .on-photo h1{ text-shadow:0 1px 2px rgba(14,11,7,.4), 0 14px 40px rgba(14,11,7,.5); }
+  .on-photo .lede{ text-shadow:0 1px 3px rgba(14,11,7,.65), 0 6px 20px rgba(14,11,7,.5); }
 
   .navlink{ position:relative; font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
             color:#5A5F4C; padding:.35rem 0;
@@ -183,28 +193,35 @@ tailwind.config = {
 <main id="main">
 <span id="top"></span>
 
-<!-- Hero: editorial. Type first, then the image full width. -->
-<section class="pt-[var(--s-6)] pb-[var(--s-5)]">
-  <div class="mx-auto max-w-[76rem] px-6 lg:px-10">
-    <div class="max-w-[52rem] mx-auto text-center rise">
-      <h1 class="h-xl">Open sky, a red barn, and room for everyone you love.</h1>
-      <p class="lede text-ink-mid mt-7 max-w-reading mx-auto">
+<!-- Hero: the venue behind, centred type over it -->
+<section class="on-photo relative isolate min-h-[78svh] lg:min-h-[86svh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <picture>
+      <source media="(max-width:640px)"
+              srcset="../images/hero-barn-dusk-portrait-640.webp 640w, ../images/hero-barn-dusk-portrait.webp 1000w"
+              sizes="100vw">
+      <img src="../images/hero-barn-dusk-1600.webp"
+           srcset="../images/hero-barn-dusk-1000.webp 1000w, ../images/hero-barn-dusk-1600.webp 1600w, ../images/hero-barn-dusk.webp 2400w"
+           sizes="100vw"
+           alt="The red barn at Hill Krest at dusk, string lights overhead and guests at tables on the gravel"
+           width="2400" height="1350" fetchpriority="high"
+           class="h-full w-full object-cover">
+    </picture>
+    <div class="absolute inset-0" style="background:#6B5742;mix-blend-mode:multiply;opacity:.22"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(26,22,16,.46) 0%, rgba(26,22,16,.28) 42%, rgba(26,22,16,.58) 100%)"></div>
+  </div>
+
+  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 py-[var(--s-6)]">
+    <div class="max-w-[48rem] mx-auto text-center">
+      <h1 class="h-xl rise" style="color:#F6F2EA">Open sky, a red barn, and room for everyone you love.</h1>
+      <p class="lede mt-7 max-w-reading mx-auto rise" style="color:rgba(246,242,234,.88)">
         A working farm in New Plymouth, Idaho, open for weddings, receptions, reunions
         and the gatherings people drive a long way for.
       </p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
-        <a href="#inquire" class="btn btn-solid">Check your date</a>
-        <a href="#property" class="btn btn-ghost">See the property</a>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-3 rise">
+        <a href="#inquire" class="btn btn-cream">Check your date</a>
+        <a href="#property" class="btn btn-outline-cream">See the property</a>
       </div>
-    </div>
-  </div>
-
-  <div class="mx-auto max-w-[88rem] px-6 lg:px-10 mt-[var(--s-5)] rise">
-    <div class="img-wrap img-tone aspect-[16/9] md:aspect-[21/9]">
-      <img src="../images/hero-golden.webp"
-           srcset="../images/hero-golden-800.webp 800w, ../images/hero-golden-1400.webp 1400w, ../images/hero-golden.webp 2000w"
-           sizes="(max-width:1024px) 100vw, 88rem"
-           alt="The red barn at Hill Krest with white frame tents and autumn cottonwoods at sunset" width="2000" height="1125">
     </div>
   </div>
 </section>
@@ -214,10 +231,10 @@ tailwind.config = {
   <div class="mx-auto max-w-[76rem] px-6 lg:px-10">
     <div class="grid lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-20 items-center">
       <div class="img-wrap img-tone aspect-[4/5] rise">
-        <img src="../images/dusk-portrait.webp"
-             srcset="../images/dusk-portrait-640.webp 640w, ../images/dusk-portrait.webp 1000w"
+        <img src="../images/doorway-couple.webp"
+             srcset="../images/doorway-couple-640.webp 640w, ../images/doorway-couple.webp 1000w"
              sizes="(max-width:1024px) 100vw, 34rem"
-             alt="Guests gathered outside the barn under string lights at dusk" width="1000" height="1250" loading="lazy">
+             alt="A couple outside the barn doorway, draped and strung with lights" width="1000" height="1250" loading="lazy">
       </div>
       <div class="rise">
         <h2 class="h-lg">The farm, and the people who keep it</h2>
@@ -255,10 +272,10 @@ tailwind.config = {
     <div class="grid md:grid-cols-3 gap-8 lg:gap-10 mt-[var(--s-5)]">
       <article class="card rise">
         <div class="img-wrap img-tone aspect-[4/3]">
-          <img src="../images/ceremony-aerial.webp"
-               srcset="../images/ceremony-aerial-600.webp 600w, ../images/ceremony-aerial.webp 900w"
+          <img src="../images/ceremony-arbor-dusk.webp"
+               srcset="../images/ceremony-arbor-dusk-640.webp 640w, ../images/ceremony-arbor-dusk-1000.webp 1000w"
                sizes="(max-width:768px) 100vw, 22rem"
-               alt="Aerial view of the ceremony lawn with rows of white chairs facing the tree line" width="900" height="675" loading="lazy">
+               alt="The timber arbor on the ceremony lawn at sunset with chairs set in two blocks" width="1000" height="750" loading="lazy">
         </div>
         <h3 class="h-md mt-6">The ceremony lawn</h3>
         <p class="text-ink-mid mt-3">
@@ -270,10 +287,10 @@ tailwind.config = {
 
       <article class="card rise">
         <div class="img-wrap img-tone aspect-[4/3]">
-          <img src="../images/hall-evening.webp"
-               srcset="../images/hall-evening-800.webp 800w, ../images/hall-evening.webp 1200w"
+          <img src="../images/hall-interior.webp"
+               srcset="../images/hall-interior-640.webp 640w, ../images/hall-interior-1000.webp 1000w"
                sizes="(max-width:768px) 100vw, 22rem"
-               alt="Inside the barn hall with open trusses, a chandelier and a long table set for dinner" width="1200" height="900" loading="lazy">
+               alt="Inside the barn hall, white painted trusses, a chandelier and hanging dried florals" width="1000" height="750" loading="lazy">
         </div>
         <h3 class="h-md mt-6">The barn hall</h3>
         <p class="text-ink-mid mt-3">
@@ -285,10 +302,10 @@ tailwind.config = {
 
       <article class="card rise">
         <div class="img-wrap img-tone aspect-[4/3]">
-          <img src="../images/barn-tents.webp"
-               srcset="../images/barn-tents-700.webp 700w, ../images/barn-tents.webp 1100w"
+          <img src="../images/tents-autumn.webp"
+               srcset="../images/tents-autumn-600.webp 600w, ../images/tents-autumn-900.webp 900w"
                sizes="(max-width:768px) 100vw, 22rem"
-               alt="White frame tents set up beside the red barn under autumn trees" width="1100" height="767" loading="lazy">
+               alt="White frame tents beside the red barn with autumn trees behind" width="900" height="675" loading="lazy">
         </div>
         <h3 class="h-md mt-6">The tented yard</h3>
         <p class="text-ink-mid mt-3">
@@ -410,28 +427,33 @@ tailwind.config = {
         <hr class="rule-short my-7">
       </div>
       <p class="text-ink-mid text-sm max-w-[22rem]">
-        <span class="tbd">More photography to come from the farm</span>, including the hall
-        empty in daylight and the getting-ready space.
+        Photographs from weddings held here. <span class="tbd">Photographer credit</span>.
       </p>
     </div>
   </div>
 
   <div class="mx-auto max-w-[88rem] px-6 lg:px-10 mt-[var(--s-4)]">
     <div class="grid grid-cols-12 gap-4 lg:gap-5">
-      <div class="img-wrap img-tone col-span-12 lg:col-span-8 aspect-[16/9] rise">
-        <img src="../images/hero-dusk.webp" srcset="../images/hero-dusk-700.webp 700w, ../images/hero-dusk-1000.webp 1000w, ../images/hero-dusk.webp 1440w" sizes="(max-width:1024px) 100vw, 56rem" alt="The barn lit from inside at dusk with string lights overhead and guests at tables" width="1440" height="810" loading="lazy">
+      <div class="img-wrap img-tone col-span-12 lg:col-span-8 aspect-[16/10] lg:aspect-auto rise">
+        <img src="../images/barn-open.webp" srcset="../images/barn-open-640.webp 640w, ../images/barn-open-1000.webp 1000w, ../images/barn-open.webp 1600w" sizes="(max-width:1024px) 100vw, 52rem" alt="The barn with its doors open onto a lit interior, guests at tables in the foreground" width="1600" height="1067" loading="lazy">
       </div>
-      <div class="img-wrap img-tone col-span-12 lg:col-span-4 aspect-[16/9] lg:aspect-auto rise">
-        <img src="../images/hall-rounds-portrait.webp" srcset="../images/hall-rounds-portrait-700.webp 700w, ../images/hall-rounds-portrait.webp 1100w" sizes="(max-width:1024px) 100vw, 27rem" alt="Round tables dressed in white linen set inside the barn hall" width="1100" height="1146" loading="lazy">
+      <!-- Two half-height frames so this column matches the tall one beside it -->
+      <div class="col-span-12 lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 lg:grid-rows-2 gap-4 lg:gap-5">
+        <div class="img-wrap img-tone aspect-[4/3] lg:aspect-[16/10] rise">
+          <img src="../images/lane-couple.webp" srcset="../images/lane-couple-640.webp 640w, ../images/lane-couple-1000.webp 1000w" sizes="(max-width:1024px) 50vw, 25rem" alt="A couple walking the gravel lane at dusk with the fence line and hills behind" width="1000" height="667" loading="lazy">
+        </div>
+        <div class="img-wrap img-tone aspect-[4/3] lg:aspect-[16/10] rise">
+          <img src="../images/detail-food.webp" srcset="../images/detail-food-640.webp 640w, ../images/detail-food.webp 1000w" sizes="(max-width:1024px) 50vw, 25rem" alt="Appetisers and crudite cups laid along a white linen table against barn wood" width="1000" height="1000" loading="lazy">
+        </div>
       </div>
       <div class="img-wrap img-tone col-span-6 lg:col-span-4 aspect-[4/3] rise">
-        <img src="../images/hall-tablescape.webp" srcset="../images/hall-tablescape-600.webp 600w, ../images/hall-tablescape.webp 800w" sizes="(max-width:1024px) 50vw, 27rem" alt="A long table set for dinner inside the barn with a wooden arch behind it" width="800" height="460" loading="lazy">
+        <img src="../images/sparkler-exit.webp" srcset="../images/sparkler-exit-640.webp 640w, ../images/sparkler-exit-1000.webp 1000w" sizes="(max-width:1024px) 50vw, 25rem" alt="Guests holding sparklers in two lines as the couple walk through at night" width="1000" height="667" loading="lazy">
       </div>
       <div class="img-wrap img-tone col-span-6 lg:col-span-4 aspect-[4/3] rise">
-        <img src="../images/barn-tents.webp" srcset="../images/barn-tents-700.webp 700w, ../images/barn-tents.webp 1100w" sizes="(max-width:1024px) 50vw, 27rem" alt="White frame tents beside the red barn under autumn cottonwoods" width="1100" height="767" loading="lazy">
+        <img src="../images/ceremony-guests.webp" srcset="../images/ceremony-guests-600.webp 600w, ../images/ceremony-guests-900.webp 900w" sizes="(max-width:1024px) 50vw, 25rem" alt="Guests seated on the lawn for an outdoor ceremony under open sky" width="900" height="600" loading="lazy">
       </div>
       <div class="img-wrap img-tone col-span-12 lg:col-span-4 aspect-[4/3] rise">
-        <img src="../images/aerial-1000.webp" srcset="../images/aerial-640.webp 640w, ../images/aerial-1000.webp 1000w" sizes="(max-width:1024px) 100vw, 27rem" alt="Aerial view of the farm showing the ceremony lawn, tented reception and barn" width="1000" height="667" loading="lazy">
+        <img src="../images/detail-dessert.webp" srcset="../images/detail-dessert-640.webp 640w, ../images/detail-dessert.webp 1000w" sizes="(max-width:1024px) 100vw, 25rem" alt="A gold tiered stand of raspberry tarts on a white linen table" width="1000" height="1250" loading="lazy">
       </div>
     </div>
   </div>
