@@ -106,15 +106,28 @@ tailwind.config = {
   .btn-outline-cream:hover{ border-color:#F6F2EA; background:rgba(246,242,234,.1); transform:translateY(-2px); }
   .btn-outline-cream:active{ transform:translateY(0); }
   .btn-ghost{ border-color:#C9BFA8; color:#2B2E20; }
+  .btn-ghost-fill{ background:rgba(246,242,234,.9); border-color:#C9BFA8; color:#2B2E20; }
+  .btn-ghost-fill:hover{ background:#F6F2EA; border-color:#2B2E20; transform:translateY(-2px); }
+  .btn-ghost-fill:active{ transform:translateY(0); }
   .btn-ghost:hover{ border-color:#2B2E20; transform:translateY(-2px); }
   .btn-ghost:active{ transform:translateY(0); }
   .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible,
   select:focus-visible, textarea:focus-visible{
     outline:2px solid #2B2E20; outline-offset:3px;
   }
-  .on-photo .btn:focus-visible, .on-photo a:focus-visible{ outline-color:#F6F2EA; }
-  .on-photo h1{ text-shadow:0 1px 2px rgba(14,11,7,.4), 0 14px 40px rgba(14,11,7,.5); }
-  .on-photo .lede{ text-shadow:0 1px 3px rgba(14,11,7,.65), 0 6px 20px rgba(14,11,7,.5); }
+  /* The hero fades into the page, so the headline sits on ivory and needs no scrim */
+  .hero-fade{
+    background:linear-gradient(to bottom,
+      #F6F2EA 0%, #F6F2EA 32%, rgba(246,242,234,.94) 44%,
+      rgba(246,242,234,.68) 54%, rgba(246,242,234,.26) 65%, rgba(246,242,234,0) 76%);
+  }
+  @media (max-width:767px){
+    .hero-fade{
+      background:linear-gradient(to bottom,
+        #F6F2EA 0%, #F6F2EA 34%, rgba(246,242,234,.95) 48%,
+        rgba(246,242,234,.72) 60%, rgba(246,242,234,.26) 72%, rgba(246,242,234,0) 84%);
+    }
+  }
 
   .navlink{ position:relative; font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
             color:#5A5F4C; padding:.35rem 0;
@@ -153,7 +166,7 @@ tailwind.config = {
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[70] focus:top-3 focus:left-3 focus:bg-ink focus:text-paper focus:px-4 focus:py-2">Skip to content</a>
 
 <!-- Masthead -->
-<header class="relative z-50 border-b border-line/70">
+<header class="relative z-50">
   <div class="mx-auto max-w-[76rem] px-6 lg:px-10">
     <div class="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center gap-8 py-7">
       <nav class="flex items-center gap-9" aria-label="Primary">
@@ -193,8 +206,8 @@ tailwind.config = {
 <main id="main">
 <span id="top"></span>
 
-<!-- Hero: the venue behind, centred type over it -->
-<section class="on-photo relative isolate min-h-[78svh] lg:min-h-[86svh] flex items-center overflow-hidden">
+<!-- Hero: the photograph rises out of the page, headline in the faded band -->
+<section class="relative isolate min-h-[82svh] lg:min-h-[88svh] flex items-start overflow-hidden">
   <div class="absolute inset-0 -z-10">
     <picture>
       <source media="(max-width:640px)"
@@ -207,20 +220,19 @@ tailwind.config = {
            width="2400" height="1350" fetchpriority="high"
            class="h-full w-full object-cover">
     </picture>
-    <div class="absolute inset-0" style="background:#6B5742;mix-blend-mode:multiply;opacity:.22"></div>
-    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(26,22,16,.46) 0%, rgba(26,22,16,.28) 42%, rgba(26,22,16,.58) 100%)"></div>
+    <div class="absolute inset-0 hero-fade"></div>
   </div>
 
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 py-[var(--s-6)]">
-    <div class="max-w-[48rem] mx-auto text-center">
-      <h1 class="h-xl rise" style="color:#F6F2EA">Open sky, a red barn, and room for everyone you love.</h1>
-      <p class="lede mt-7 max-w-reading mx-auto rise" style="color:rgba(246,242,234,.88)">
-        A working farm in New Plymouth, Idaho, open for weddings, receptions, reunions
-        and the gatherings people drive a long way for.
+  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-[var(--s-4)] pb-[var(--s-6)]">
+    <div class="max-w-[54rem] mx-auto text-center">
+      <h1 class="h-xl rise">Open sky, a red barn, and room for everyone you love.</h1>
+      <p class="lede text-ink-mid mt-6 max-w-[42rem] mx-auto rise">
+        A working farm in New Plymouth, Idaho, open for weddings, receptions and
+        gatherings of every size.
       </p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-3 rise">
-        <a href="#inquire" class="btn btn-cream">Check your date</a>
-        <a href="#property" class="btn btn-outline-cream">See the property</a>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 rise">
+        <a href="#inquire" class="btn btn-solid">Check your date</a>
+        <a href="#property" class="btn btn-ghost-fill">See the property</a>
       </div>
     </div>
   </div>
