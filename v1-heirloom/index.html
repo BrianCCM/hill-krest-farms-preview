@@ -115,18 +115,25 @@ tailwind.config = {
   select:focus-visible, textarea:focus-visible{
     outline:2px solid #2B2E20; outline-offset:3px;
   }
-  /* The hero fades into the page, so the headline sits on ivory and needs no scrim */
-  .hero-fade{
+  /* The photograph gets its own band at the foot of the hero, with real ivory above it.
+     Stretched across the whole hero it renders about 0.67x the viewport width tall, which is
+     taller than the screen, so the venue can never clear the text. A band fixes that. */
+  .hero-photo{ position:relative; height:clamp(300px, 40vw, 560px); }
+  /* <picture> is inline by default, so the image has no box to fill without this */
+  .hero-photo picture{ display:block; width:100%; height:100%; }
+  .hero-photo img{
+    display:block; width:100%; height:100%;
+    object-fit:cover; object-position:50% 82%;
+  }
+  .hero-photo::after{
+    content:''; position:absolute; inset:0 0 auto 0; height:26%;
     background:linear-gradient(to bottom,
-      #F6F2EA 0%, #F6F2EA 32%, rgba(246,242,234,.94) 44%,
-      rgba(246,242,234,.68) 54%, rgba(246,242,234,.26) 65%, rgba(246,242,234,0) 76%);
+      #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
+      rgba(246,242,234,.26) 78%, rgba(246,242,234,0) 100%);
   }
   @media (max-width:767px){
-    .hero-fade{
-      background:linear-gradient(to bottom,
-        #F6F2EA 0%, #F6F2EA 34%, rgba(246,242,234,.95) 48%,
-        rgba(246,242,234,.72) 60%, rgba(246,242,234,.26) 72%, rgba(246,242,234,0) 84%);
-    }
+    .hero-photo{ height:clamp(300px, 72vw, 440px); }
+    .hero-photo::after{ height:24%; }
   }
 
   .navlink{ position:relative; font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
@@ -206,24 +213,9 @@ tailwind.config = {
 <main id="main">
 <span id="top"></span>
 
-<!-- Hero: the photograph rises out of the page, headline in the faded band -->
-<section class="relative isolate min-h-[82svh] lg:min-h-[88svh] flex items-start overflow-hidden">
-  <div class="absolute inset-0 -z-10">
-    <picture>
-      <source media="(max-width:640px)"
-              srcset="../images/hero-barn-dusk-portrait-640.webp 640w, ../images/hero-barn-dusk-portrait.webp 1000w"
-              sizes="100vw">
-      <img src="../images/hero-barn-dusk-1600.webp"
-           srcset="../images/hero-barn-dusk-1000.webp 1000w, ../images/hero-barn-dusk-1600.webp 1600w, ../images/hero-barn-dusk.webp 2400w"
-           sizes="100vw"
-           alt="The red barn at Hill Krest at dusk, string lights overhead and guests at tables on the gravel"
-           width="2400" height="1350" fetchpriority="high"
-           class="h-full w-full object-cover">
-    </picture>
-    <div class="absolute inset-0 hero-fade"></div>
-  </div>
-
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-[var(--s-4)] pb-[var(--s-6)]">
+<!-- Hero: type on ivory, the venue in its own band beneath it -->
+<section class="relative overflow-hidden">
+  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-[var(--s-3)] pb-[var(--s-4)]">
     <div class="max-w-[54rem] mx-auto text-center">
       <h1 class="h-xl rise">Open sky, a red barn, and room for everyone you love.</h1>
       <p class="lede text-ink-mid mt-6 max-w-[42rem] mx-auto rise">
@@ -232,9 +224,22 @@ tailwind.config = {
       </p>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-3 rise">
         <a href="#inquire" class="btn btn-solid">Check your date</a>
-        <a href="#property" class="btn btn-ghost-fill">See the property</a>
+        <a href="#property" class="btn btn-ghost">See the property</a>
       </div>
     </div>
+  </div>
+
+  <div class="hero-photo rise">
+    <picture>
+      <source media="(max-width:640px)"
+              srcset="../images/hero-truck-mobile-640.webp 640w, ../images/hero-truck-mobile.webp 1000w"
+              sizes="100vw">
+      <img src="../images/hero-truck-1200.webp"
+           srcset="../images/hero-truck-800.webp 800w, ../images/hero-truck-1200.webp 1200w, ../images/hero-truck.webp 1599w"
+           sizes="100vw"
+           alt="A vintage yellow farm truck dressed with geraniums, the grain bin, the red barn and a tent with guests behind it"
+           width="1599" height="1066" fetchpriority="high">
+    </picture>
   </div>
 </section>
 
