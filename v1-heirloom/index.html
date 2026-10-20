@@ -118,7 +118,7 @@ tailwind.config = {
   /* The photograph gets its own band at the foot of the hero, with real ivory above it.
      Stretched across the whole hero it renders about 0.67x the viewport width tall, which is
      taller than the screen, so the venue can never clear the text. A band fixes that. */
-  .hero-photo{ position:relative; height:clamp(300px, 34vw, 480px); }
+  .hero-photo{ position:relative; height:clamp(300px, 27vw, 392px); }
   /* <picture> is inline by default, so the image has no box to fill without this */
   .hero-photo picture{ display:block; width:100%; height:100%; }
   .hero-photo img{
@@ -126,13 +126,13 @@ tailwind.config = {
     object-fit:cover; object-position:50% 100%;
   }
   .hero-photo::after{
-    content:''; position:absolute; inset:0 0 auto 0; height:18%;
+    content:''; position:absolute; inset:0 0 auto 0; height:15%;
     background:linear-gradient(to bottom,
       #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
       rgba(246,242,234,.26) 78%, rgba(246,242,234,0) 100%);
   }
   @media (max-width:767px){
-    .hero-photo{ height:clamp(300px, 76vw, 420px); }
+    .hero-photo{ height:clamp(320px, 84vw, 440px); }
     .hero-photo::after{ height:16%; }
   }
 
@@ -182,7 +182,7 @@ tailwind.config = {
         <a href="#planning" class="navlink">Pricing</a>
       </nav>
       <a href="#top" class="block" aria-label="Hill Krest Farm and Events, home">
-        <img src="../brand_assets/logos/web/br-arbor-dark.png" alt="Hill Krest Farm and Events" class="h-[88px] w-auto">
+        <img src="../brand_assets/logos/web/br-arbor-dark.png" alt="Hill Krest Farm and Events" class="h-[76px] w-auto">
       </a>
       <nav class="flex items-center justify-end gap-9" aria-label="Secondary">
         <a href="#gallery" class="navlink">Gallery</a>
@@ -215,14 +215,14 @@ tailwind.config = {
 
 <!-- Hero: type on ivory, the venue in its own band beneath it -->
 <section class="relative overflow-hidden">
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-[var(--s-3)] pb-[var(--s-4)]">
+  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-[var(--s-1)] pb-[var(--s-3)]">
     <div class="max-w-[54rem] mx-auto text-center">
       <h1 class="h-xl rise">Open sky, a red barn, and room for everyone you love.</h1>
-      <p class="lede text-ink-mid mt-6 max-w-[42rem] mx-auto rise">
+      <p class="lede text-ink-mid mt-5 max-w-[42rem] mx-auto rise">
         A working farm in New Plymouth, Idaho, open for weddings, receptions and
         gatherings of every size.
       </p>
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 rise">
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-3 rise">
         <a href="#inquire" class="btn btn-solid">Check your date</a>
         <a href="#property" class="btn btn-ghost">See the property</a>
       </div>
@@ -232,13 +232,13 @@ tailwind.config = {
   <div class="hero-photo rise">
     <picture>
       <source media="(max-width:640px)"
-              srcset="../images/hero-hall-mobile-640.webp 640w, ../images/hero-hall-mobile.webp 1000w"
+              srcset="../images/hero-couple-mobile-640.webp 640w, ../images/hero-couple-mobile.webp 1000w"
               sizes="100vw">
-      <img src="../images/hero-hall-1200.webp"
-           srcset="../images/hero-hall-800.webp 800w, ../images/hero-hall-1200.webp 1200w, ../images/hero-hall.webp 1800w"
+      <img src="../images/hero-couple-1200.webp"
+           srcset="../images/hero-couple-800.webp 800w, ../images/hero-couple-1200.webp 1200w, ../images/hero-couple.webp 1800w"
            sizes="100vw"
-           alt="Inside the barn hall, white painted trusses, a chandelier, hanging dried florals and guests at tables"
-           width="1800" height="1200" fetchpriority="high">
+           alt="The barn hall's chandelier and white trusses above a couple dancing in the open doorway"
+           width="1800" height="534" fetchpriority="high">
     </picture>
   </div>
 </section>
