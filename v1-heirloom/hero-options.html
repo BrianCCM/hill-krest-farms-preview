@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hill Krest | Three hero treatments</title>
+<title>Hill Krest | Two hero photographs</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" href="../brand_assets/logos/web/favicon-heirloom.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,146 +22,106 @@
         font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
         padding:1rem 2.25rem; border-radius:1px; border:1px solid transparent;
         transition:transform .35s var(--ease), background-color .35s var(--ease), border-color .35s var(--ease); }
-  .btn-cream{ background:#F6F2EA; color:#2B2E20; box-shadow:0 2px 4px rgba(10,8,5,.28), 0 16px 32px -20px rgba(10,8,5,.6); }
-  .btn-cream:hover{ background:#FFFDF8; transform:translateY(-2px); }
-  .btn-outline-cream{ border-color:rgba(246,242,234,.5); color:#F6F2EA; }
-  .btn-outline-cream:hover{ border-color:#F6F2EA; background:rgba(246,242,234,.1); transform:translateY(-2px); }
   .btn-solid{ background:#2B2E20; color:#F6F2EA; box-shadow:0 1px 2px rgba(20,18,12,.1), 0 10px 24px -14px rgba(20,18,12,.45); }
   .btn-solid:hover{ background:#3A3E2C; transform:translateY(-2px); }
   .btn-ghost{ border-color:#C9BFA8; color:#2B2E20; }
-  .btn-ghost-fill{ background:rgba(246,242,234,.9); border-color:#C9BFA8; color:#2B2E20; }
-  .btn-ghost-fill:hover{ background:#F6F2EA; border-color:#2B2E20; transform:translateY(-2px); }
   .btn-ghost:hover{ border-color:#2B2E20; transform:translateY(-2px); }
   .btn:active{ transform:translateY(0); }
   .btn:focus-visible, a:focus-visible{ outline:2px solid #2B2E20; outline-offset:3px; }
-  .hero{ position:relative; isolation:isolate; overflow:hidden;
-         min-height:min(86svh,780px); display:flex; }
-  .hero img{ width:100%; height:100%; object-fit:cover; }
-  .rule-short{ width:3rem; height:1px; background:#A8705A; border:0; }
   .tag{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:#8A8F7C; }
+
+  .hero-photo{ position:relative; }
+  .hero-photo picture{ display:block; width:100%; height:100%; }
+  .hero-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+  .hero-photo::after{
+    content:''; position:absolute; inset:0 0 auto 0;
+    background:linear-gradient(to bottom,
+      #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
+      rgba(246,242,234,.26) 78%, rgba(246,242,234,0) 100%);
+  }
+  /* Truck: taller band, framed on the lower half of the frame */
+  .band-truck{ height:clamp(300px,40vw,560px); }
+  .band-truck img{ object-position:50% 82%; }
+  .band-truck::after{ height:26%; }
+  /* Hall: shorter band, anchored to the foot of the frame */
+  .band-hall{ height:clamp(300px,34vw,480px); }
+  .band-hall img{ object-position:50% 100%; }
+  .band-hall::after{ height:18%; }
 </style>
 </head>
 <body class="antialiased">
 
-<div style="background:#2B2E20;color:#F6F2EA;padding:.9rem 1.5rem;text-align:center;font-size:.875rem">
-  Superseded. These three were built against the old dusk-barn hero. The live page now uses the
-  farm truck photograph in a band beneath the type.
-  <a href="index.html" style="color:#F6F2EA;text-decoration:underline;text-underline-offset:3px">See the current hero</a>.
-</div>
 <header class="mx-auto max-w-[70rem] px-6 lg:px-10 pt-14 pb-10 text-center">
   <img src="../brand_assets/logos/web/br-arbor-dark.png" alt="Hill Krest Farm and Events" class="h-20 w-auto mx-auto">
-  <h1 class="h-xl mt-8">Three ways to handle the hero text</h1>
-  <p class="lede text-[#5A5F4C] mt-6 max-w-[40rem] mx-auto">
-    The problem is the lit doorway directly behind the headline. It is the brightest thing in
-    the photograph, which is why a plain dark wash has to flatten the whole image to fix it.
-    Each option below solves it a different way. Scroll through and tell us the letter.
+  <h1 class="h-xl mt-8">Two photographs for the hero</h1>
+  <p class="lede text-[#5A5F4C] mt-6 max-w-[42rem] mx-auto">
+    Same layout, same words, two different first impressions. Scroll both and tell us which
+    one. Either is a one line change.
   </p>
   <p class="text-[#5A5F4C] text-sm mt-5">
     <a href="index.html" class="underline underline-offset-4 hover:text-[#2B2E20] transition-colors">Back to the full Heirloom page</a>
   </p>
 </header>
 
-<!-- ============ A: scrim shaped to the text ============ -->
+<!-- ===================== One: the farm truck ===================== -->
 <section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-10 pb-5">
-  <p class="tag">Option A</p>
-  <h2 class="text-[2rem] display mt-2">Shaped scrim</h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[44rem]">
-    The darkening is an oval centred on the text rather than a flat sheet over everything, so
-    the trees, the lights and the foreground tables keep their colour while the hotspot behind
-    the headline gets pushed down. Closest to what you have now, and the photograph stays the
-    loudest thing on the page.
+  <p class="tag">Option one</p>
+  <h2 class="text-[2rem] display mt-2">The farm truck</h2>
+  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
+    Sells the setting. In one frame you get the truck and geraniums, the farm's own sign, the
+    grain bin, the red barn, the tent and guests arriving. Someone who has never heard of you
+    understands what the place is before they read a word. It is daylight and outdoors, so it
+    reads as a working farm first and a wedding venue second.
   </p>
 </section>
-<div class="hero items-center">
-  <div class="absolute inset-0 -z-10">
-    <img src="../images/hero-barn-dusk-1600.webp" alt="The red barn at dusk with string lights and guests at tables" width="2400" height="1350">
-    <div class="absolute inset-0" style="background:#6B5742;mix-blend-mode:multiply;opacity:.22"></div>
-    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(26,22,16,.42) 0%, rgba(26,22,16,.26) 42%, rgba(26,22,16,.55) 100%)"></div>
-    <div class="absolute inset-0" style="background:radial-gradient(ellipse 58% 46% at 50% 54%, rgba(20,16,11,.72) 0%, rgba(20,16,11,.52) 48%, rgba(20,16,11,.16) 78%, rgba(20,16,11,0) 100%)"></div>
-  </div>
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 py-20">
-    <div class="max-w-[46rem] mx-auto text-center">
-      <h2 class="h-xl" style="color:#F6F2EA;text-shadow:0 1px 2px rgba(14,11,7,.45), 0 14px 40px rgba(14,11,7,.5)">Open sky, a red barn, and room for everyone you love.</h2>
-      <p class="lede mt-7 max-w-[34rem] mx-auto" style="color:rgba(246,242,234,.92);text-shadow:0 1px 3px rgba(14,11,7,.7), 0 6px 20px rgba(14,11,7,.55)">
-        A working farm in New Plymouth, Idaho, open for weddings, receptions, reunions
-        and the gatherings people drive a long way for.
-      </p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
-        <a href="#" class="btn btn-cream">Check your date</a>
-        <a href="#" class="btn btn-outline-cream">See the property</a>
-      </div>
-    </div>
-  </div>
+<div class="hero-photo band-truck">
+  <picture>
+    <source media="(max-width:640px)" srcset="../images/hero-truck-mobile-640.webp 640w, ../images/hero-truck-mobile.webp 1000w" sizes="100vw">
+    <img src="../images/hero-truck-1200.webp" srcset="../images/hero-truck-800.webp 800w, ../images/hero-truck-1200.webp 1200w, ../images/hero-truck.webp 1599w" sizes="100vw"
+         alt="A vintage yellow farm truck dressed with geraniums, the grain bin, the red barn and a tent with guests behind it" width="1599" height="1066" loading="lazy">
+  </picture>
 </div>
 
-<!-- ============ B: ivory card ============ -->
+<!-- ===================== Two: the barn hall ===================== -->
 <section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-5">
-  <p class="tag">Option B</p>
-  <h2 class="text-[2rem] display mt-2">Ivory card</h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[44rem]">
-    The words sit on a panel of the site's own ivory, floating over the photograph. Legibility
-    stops depending on the picture entirely, so this keeps working if you swap the hero for a
-    brighter summer shot later. The most formal of the three, and the most wedding-stationery.
-    The trade is that the panel covers part of the barn.
+  <p class="tag">Option two</p>
+  <h2 class="text-[2rem] display mt-2">The barn hall at night <span style="font-size:.6em;color:#A8705A">Currently live</span></h2>
+  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
+    Sells the feeling. A couple dancing, the room full, hanging florals, string lights and the
+    doors open onto the dark. This is the better photograph and the stronger emotional hook,
+    and it is the one couples picture themselves inside. The trade is that it shows a room
+    rather than a farm, so the setting has to be carried by the sections below it.
+  </p>
+  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
+    Note what is missing: the chandelier and the white trusses sit above this crop. They are
+    the best architecture in the building, and the only way to include them is to push the
+    couple and the guests below the fold.
   </p>
 </section>
-<div class="hero items-center">
-  <div class="absolute inset-0 -z-10">
-    <img src="../images/hero-barn-dusk-1600.webp" alt="The red barn at dusk with string lights and guests at tables" width="2400" height="1350">
-    <div class="absolute inset-0" style="background:#6B5742;mix-blend-mode:multiply;opacity:.14"></div>
-    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(26,22,16,.26) 0%, rgba(26,22,16,.12) 45%, rgba(26,22,16,.38) 100%)"></div>
-  </div>
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 py-20">
-    <div class="max-w-[44rem] mx-auto text-center px-8 sm:px-14 py-14 sm:py-16"
-         style="background:#F6F2EA;box-shadow:0 2px 6px rgba(14,11,7,.18), 0 40px 80px -48px rgba(14,11,7,.7)">
-      <h2 class="h-xl">Open sky, a red barn, and room for everyone you love.</h2>
-      <hr class="rule-short my-7 mx-auto">
-      <p class="lede text-[#5A5F4C] max-w-[32rem] mx-auto">
-        A working farm in New Plymouth, Idaho, open for weddings, receptions, reunions
-        and the gatherings people drive a long way for.
-      </p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
-        <a href="#" class="btn btn-solid">Check your date</a>
-        <a href="#" class="btn btn-ghost">See the property</a>
-      </div>
-    </div>
-  </div>
+<div class="hero-photo band-hall">
+  <picture>
+    <source media="(max-width:640px)" srcset="../images/hero-hall-mobile-640.webp 640w, ../images/hero-hall-mobile.webp 1000w" sizes="100vw">
+    <img src="../images/hero-hall-1200.webp" srcset="../images/hero-hall-800.webp 800w, ../images/hero-hall-1200.webp 1200w, ../images/hero-hall.webp 1800w" sizes="100vw"
+         alt="Inside the barn hall, hanging dried florals, string lights, a couple dancing and guests at tables" width="1800" height="1200" loading="lazy">
+  </picture>
 </div>
 
-<!-- ============ C: fade to ivory ============ -->
-<section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-5">
-  <p class="tag">Option C</p>
-  <h2 class="text-[2rem] display mt-2">Fade to ivory</h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[44rem]">
-    The photograph rises out of the page rather than sitting in a box. The top fades into the
-    same ivory as the rest of the site, the headline sits in that faded band in dark ink, and
-    the picture is fully uncovered from the barn roof down. No scrim over the barn at all, so
-    the dusk colour and the string lights are the strongest they can be.
+<section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-6">
+  <h2 class="text-[2rem] display">If you want both</h2>
+  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
+    Whichever loses here does not go to waste. The truck is the natural opener for a gallery
+    or an about section, and the hall is already doing work further down the page. There is
+    also the option of rotating the hero seasonally, since the truck is spring and summer and
+    the hall is an evening in autumn.
   </p>
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a href="index.html" class="btn btn-solid">See the full page</a>
+    <a href="#top" class="btn btn-ghost">Back to the top</a>
+  </div>
 </section>
-<div class="hero items-start">
-  <div class="absolute inset-0 -z-10">
-    <img src="../images/hero-barn-dusk-1600.webp" alt="The red barn at dusk with string lights and guests at tables" width="2400" height="1350">
-    <div class="absolute inset-0" style="background:linear-gradient(to bottom, #F6F2EA 0%, #F6F2EA 26%, rgba(246,242,234,.92) 38%, rgba(246,242,234,.55) 50%, rgba(246,242,234,.12) 62%, rgba(246,242,234,0) 72%)"></div>
-  </div>
-  <div class="mx-auto max-w-[76rem] w-full px-6 lg:px-10 pt-14 pb-20">
-    <div class="max-w-[46rem] mx-auto text-center">
-      <h2 class="h-xl">Open sky, a red barn, and room for everyone you love.</h2>
-      <p class="lede text-[#5A5F4C] mt-7 max-w-[34rem] mx-auto">
-        A working farm in New Plymouth, Idaho, open for weddings, receptions, reunions
-        and the gatherings people drive a long way for.
-      </p>
-      <div class="mt-9 flex flex-wrap items-center justify-center gap-3">
-        <a href="#" class="btn btn-solid">Check your date</a>
-        <a href="#" class="btn btn-ghost-fill">See the property</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<footer class="mx-auto max-w-[76rem] px-6 lg:px-10 py-16 text-sm text-[#8A8F7C] flex flex-wrap justify-between gap-4">
+<footer class="mx-auto max-w-[76rem] px-6 lg:px-10 py-14 text-sm text-[#8A8F7C]">
   <p>Hill Krest Farm and Events, hero comparison</p>
-  <p><a href="index.html" class="underline underline-offset-4 hover:text-[#2B2E20] transition-colors">Back to the full page</a></p>
 </footer>
 </body>
 </html>

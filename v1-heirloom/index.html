@@ -118,22 +118,22 @@ tailwind.config = {
   /* The photograph gets its own band at the foot of the hero, with real ivory above it.
      Stretched across the whole hero it renders about 0.67x the viewport width tall, which is
      taller than the screen, so the venue can never clear the text. A band fixes that. */
-  .hero-photo{ position:relative; height:clamp(300px, 40vw, 560px); }
+  .hero-photo{ position:relative; height:clamp(300px, 34vw, 480px); }
   /* <picture> is inline by default, so the image has no box to fill without this */
   .hero-photo picture{ display:block; width:100%; height:100%; }
   .hero-photo img{
     display:block; width:100%; height:100%;
-    object-fit:cover; object-position:50% 82%;
+    object-fit:cover; object-position:50% 100%;
   }
   .hero-photo::after{
-    content:''; position:absolute; inset:0 0 auto 0; height:26%;
+    content:''; position:absolute; inset:0 0 auto 0; height:18%;
     background:linear-gradient(to bottom,
       #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
       rgba(246,242,234,.26) 78%, rgba(246,242,234,0) 100%);
   }
   @media (max-width:767px){
-    .hero-photo{ height:clamp(300px, 72vw, 440px); }
-    .hero-photo::after{ height:24%; }
+    .hero-photo{ height:clamp(300px, 76vw, 420px); }
+    .hero-photo::after{ height:16%; }
   }
 
   .navlink{ position:relative; font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
@@ -232,13 +232,13 @@ tailwind.config = {
   <div class="hero-photo rise">
     <picture>
       <source media="(max-width:640px)"
-              srcset="../images/hero-truck-mobile-640.webp 640w, ../images/hero-truck-mobile.webp 1000w"
+              srcset="../images/hero-hall-mobile-640.webp 640w, ../images/hero-hall-mobile.webp 1000w"
               sizes="100vw">
-      <img src="../images/hero-truck-1200.webp"
-           srcset="../images/hero-truck-800.webp 800w, ../images/hero-truck-1200.webp 1200w, ../images/hero-truck.webp 1599w"
+      <img src="../images/hero-hall-1200.webp"
+           srcset="../images/hero-hall-800.webp 800w, ../images/hero-hall-1200.webp 1200w, ../images/hero-hall.webp 1800w"
            sizes="100vw"
-           alt="A vintage yellow farm truck dressed with geraniums, the grain bin, the red barn and a tent with guests behind it"
-           width="1599" height="1066" fetchpriority="high">
+           alt="Inside the barn hall, white painted trusses, a chandelier, hanging dried florals and guests at tables"
+           width="1800" height="1200" fetchpriority="high">
     </picture>
   </div>
 </section>
@@ -304,10 +304,10 @@ tailwind.config = {
 
       <article class="card rise">
         <div class="img-wrap img-tone aspect-[4/3]">
-          <img src="../images/hall-interior.webp"
-               srcset="../images/hall-interior-640.webp 640w, ../images/hall-interior-1000.webp 1000w"
+          <img src="../images/barn-doorway-golden.webp"
+               srcset="../images/barn-doorway-golden-600.webp 600w, ../images/barn-doorway-golden-900.webp 900w"
                sizes="(max-width:768px) 100vw, 22rem"
-               alt="Inside the barn hall, white painted trusses, a chandelier and hanging dried florals" width="1000" height="750" loading="lazy">
+               alt="Guests at long tables inside the barn, the doors open onto low golden sunlight" width="900" height="600" loading="lazy">
         </div>
         <h3 class="h-md mt-6">The barn hall</h3>
         <p class="text-ink-mid mt-3">
