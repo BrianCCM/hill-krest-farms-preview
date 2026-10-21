@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hill Krest | Two hero photographs</title>
+<title>Hill Krest | Hero options</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/png" href="../brand_assets/logos/web/favicon-heirloom.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +14,10 @@
 <style>
   :root{ --ease:cubic-bezier(.22,1,.36,1); }
   body{ background:#F6F2EA; color:#2B2E20; font-family:Jost,system-ui,sans-serif; }
-  h1,h2,.display{ font-family:"Cormorant Garamond",Georgia,serif; font-weight:300;
-                  letter-spacing:-.03em; text-wrap:balance; }
+  h1,h2,h3,.display{ font-family:"Cormorant Garamond",Georgia,serif; font-weight:300;
+                     letter-spacing:-.03em; text-wrap:balance; }
   .h-xl{ font-size:clamp(2.5rem,5.4vw,4.5rem); line-height:1.04; }
+  .h-sp{ font-size:clamp(2.25rem,3.6vw,3.5rem); line-height:1.06; letter-spacing:-.03em; }
   .lede{ font-size:clamp(1.0625rem,1.4vw,1.1875rem); line-height:1.7; font-weight:300; text-wrap:pretty; }
   .btn{ display:inline-flex; align-items:center; justify-content:center;
         font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase;
@@ -29,94 +30,144 @@
   .btn:active{ transform:translateY(0); }
   .btn:focus-visible, a:focus-visible{ outline:2px solid #2B2E20; outline-offset:3px; }
   .tag{ font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:#8A8F7C; }
+  .note{ color:#5A5F4C; }
+  .rule{ height:1px; background:#DED6C6; border:0; }
 
   .hero-photo{ position:relative; }
-  .hero-photo picture{ display:block; width:100%; height:100%; }
-  .hero-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+  .hero-photo picture, .hero-photo img{ display:block; width:100%; height:100%; }
+  .hero-photo img{ object-fit:cover; }
   .hero-photo::after{
     content:''; position:absolute; inset:0 0 auto 0;
     background:linear-gradient(to bottom,
       #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
       rgba(246,242,234,.26) 78%, rgba(246,242,234,0) 100%);
   }
-  /* Truck: taller band, framed on the lower half of the frame */
-  .band-truck{ height:clamp(300px,40vw,560px); }
-  .band-truck img{ object-position:50% 82%; }
-  .band-truck::after{ height:26%; }
-  /* Hall: shorter band, anchored to the foot of the frame */
-  .band-hall{ height:clamp(300px,27vw,392px); }
-  .band-hall img{ object-position:50% 100%; }
-  .band-hall::after{ height:15%; }
+  .band-cer{ height:clamp(320px,33vw,480px); }   .band-cer::after{ height:14%; }
+  .band-truck{ height:clamp(300px,40vw,560px); } .band-truck img{ object-position:50% 82%; } .band-truck::after{ height:26%; }
+  .band-couple{ height:clamp(300px,27vw,392px); }.band-couple img{ object-position:50% 100%; }.band-couple::after{ height:15%; }
 </style>
 </head>
 <body class="antialiased">
 
 <header class="mx-auto max-w-[70rem] px-6 lg:px-10 pt-14 pb-10 text-center">
   <img src="../brand_assets/logos/web/br-arbor-dark.png" alt="Hill Krest Farm and Events" class="h-20 w-auto mx-auto">
-  <h1 class="h-xl mt-8">Two photographs for the hero</h1>
-  <p class="lede text-[#5A5F4C] mt-6 max-w-[42rem] mx-auto">
-    Same layout, same words, two different first impressions. Scroll both and tell us which
-    one. Either is a one line change.
+  <h1 class="h-xl mt-8">Every hero we have tried</h1>
+  <p class="lede note mt-6 max-w-[44rem] mx-auto">
+    Four in one place so they can be compared rather than remembered. The first three are the
+    same layout with a different photograph. The fourth changes the layout itself, which is
+    worth a look if none of the photographs have felt right.
   </p>
-  <p class="text-[#5A5F4C] text-sm mt-5">
+  <p class="note text-sm mt-5">
     <a href="index.html" class="underline underline-offset-4 hover:text-[#2B2E20] transition-colors">Back to the full Heirloom page</a>
   </p>
 </header>
 
-<!-- ===================== One: the farm truck ===================== -->
+<!-- A: ceremony lawn, band -->
 <section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-10 pb-5">
-  <p class="tag">Option one</p>
+  <p class="tag">Option A</p>
+  <h2 class="text-[2rem] display mt-2">The ceremony lawn <span style="font-size:.6em;color:#A8705A">Currently live</span></h2>
+  <p class="note mt-3 max-w-[46rem]">
+    The arbor dressed in red and cream, chairs set in two blocks, the aisle mown down the
+    middle, the milk can and the pampas. Nobody in it, so nothing had to be cropped away, and
+    it is the only photograph that shows a guest exactly what they will walk into. The haze in
+    the sky that day means the gradient reads as morning mist rather than a wash.
+  </p>
+</section>
+<div class="hero-photo band-cer">
+  <picture>
+    <source media="(max-width:640px)" srcset="../images/hero-ceremony-mobile-640.webp 640w, ../images/hero-ceremony-mobile.webp 980w" sizes="100vw">
+    <img src="../images/hero-ceremony-1000.webp" srcset="../images/hero-ceremony-700.webp 700w, ../images/hero-ceremony-1000.webp 1000w, ../images/hero-ceremony.webp 1440w" sizes="100vw"
+         alt="The ceremony lawn set with a draped timber arbor and chairs either side of a grass aisle" width="1440" height="572" loading="lazy">
+  </picture>
+</div>
+
+<!-- B: farm truck, band -->
+<section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-5">
+  <p class="tag">Option B</p>
   <h2 class="text-[2rem] display mt-2">The farm truck</h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
-    Sells the setting. In one frame you get the truck and geraniums, the farm's own sign, the
-    grain bin, the red barn, the tent and guests arriving. Someone who has never heard of you
-    understands what the place is before they read a word. It is daylight and outdoors, so it
-    reads as a working farm first and a wedding venue second.
+  <p class="note mt-3 max-w-[46rem]">
+    Sells the setting. The truck and geraniums, the farm's own sign, the grain bin, the barn,
+    the tent and guests arriving, all in one frame. A stranger understands what the place is
+    before reading a word.
   </p>
 </section>
 <div class="hero-photo band-truck">
   <picture>
     <source media="(max-width:640px)" srcset="../images/hero-truck-mobile-640.webp 640w, ../images/hero-truck-mobile.webp 1000w" sizes="100vw">
     <img src="../images/hero-truck-1200.webp" srcset="../images/hero-truck-800.webp 800w, ../images/hero-truck-1200.webp 1200w, ../images/hero-truck.webp 1599w" sizes="100vw"
-         alt="A vintage yellow farm truck dressed with geraniums, the grain bin, the red barn and a tent with guests behind it" width="1599" height="1066" loading="lazy">
+         alt="A vintage yellow farm truck dressed with geraniums, the grain bin, the red barn and a tent behind it" width="1599" height="1066" loading="lazy">
   </picture>
 </div>
 
-<!-- ===================== Two: the barn hall ===================== -->
+<!-- C: couple and ceiling, band -->
 <section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-5">
-  <p class="tag">Option two</p>
-  <h2 class="text-[2rem] display mt-2">The barn hall at night <span style="font-size:.6em;color:#A8705A">Currently live</span></h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
-    Sells the feeling. Cropped to the chandelier, the white trusses, the hanging florals and
-    the couple alone, with every seated guest cut away. It is the better photograph and the
-    stronger hook, and it is the one couples picture themselves inside. The trade is that it
-    shows a room rather than a farm, so the setting has to be carried by the sections below.
-  </p>
-  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
-    The crop is only possible because the guests' heads begin lower in the frame than the
-    couple's. Cutting just above them keeps the couple and loses the audience. It does mean
-    the couple is cropped at the chest, since that is where the front row starts.
+  <p class="tag">Option C</p>
+  <h2 class="text-[2rem] display mt-2">The couple and the ceiling</h2>
+  <p class="note mt-3 max-w-[46rem]">
+    The barn hall cropped to the chandelier, the trusses and the couple, with every seated
+    guest cut away. The quietest and most formal of the three, and the only one that shows the
+    inside of the building.
   </p>
 </section>
-<div class="hero-photo band-hall">
+<div class="hero-photo band-couple">
   <picture>
     <source media="(max-width:640px)" srcset="../images/hero-couple-mobile-640.webp 640w, ../images/hero-couple-mobile.webp 1000w" sizes="100vw">
     <img src="../images/hero-couple-1200.webp" srcset="../images/hero-couple-800.webp 800w, ../images/hero-couple-1200.webp 1200w, ../images/hero-couple.webp 1800w" sizes="100vw"
-         alt="The barn hall's chandelier and white trusses above a couple dancing in the open doorway" width="1800" height="510" loading="lazy">
+         alt="The barn hall's chandelier and white trusses above a couple dancing in the open doorway" width="1800" height="534" loading="lazy">
   </picture>
 </div>
 
+<!-- D: split layout -->
+<section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-5">
+  <p class="tag">Option D, a different layout</p>
+  <h2 class="text-[2rem] display mt-2">Words beside the picture, not above it</h2>
+  <p class="note mt-3 max-w-[46rem]">
+    Every option above puts the headline above a wide strip of photograph, which is why each
+    new picture has needed a different crop to fit. Setting the words beside the picture
+    instead gives the photograph a tall column, close to the shape a camera actually produces.
+    Almost nothing gets cropped, no gradient is needed, and the next photograph will drop in
+    without any of this.
+  </p>
+  <p class="note mt-3 max-w-[46rem]">
+    It also uses the file better. Across the full width this photograph is stretched to its
+    exact pixel width and will look soft on a sharp screen; in a column it has room to spare.
+  </p>
+</section>
+<section class="grid lg:grid-cols-[.92fr_1.08fr] items-stretch">
+  <div class="flex items-center">
+    <div class="w-full max-w-[34rem] mx-auto lg:ml-auto lg:mr-0 px-6 lg:pl-10 lg:pr-14 py-16 text-center lg:text-left">
+      <h2 class="h-sp">Open sky, a red barn, and room for everyone you love.</h2>
+      <p class="lede note mt-6">
+        A working farm in New Plymouth, Idaho, open for weddings, receptions and gatherings
+        of every size.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+        <a href="#" class="btn btn-solid">Check your date</a>
+        <a href="#" class="btn btn-ghost">See the property</a>
+      </div>
+    </div>
+  </div>
+  <div class="min-h-[320px] lg:min-h-[600px]">
+    <img src="../images/hero-ceremony-tall-900.webp"
+         srcset="../images/hero-ceremony-tall-900.webp 900w, ../images/hero-ceremony-tall.webp 1354w"
+         sizes="(max-width:1024px) 100vw, 55vw"
+         alt="The ceremony lawn set with a draped timber arbor, chairs and the tree line behind"
+         width="1354" height="1069" class="w-full h-full object-cover" loading="lazy">
+  </div>
+</section>
+
 <section class="mx-auto max-w-[76rem] px-6 lg:px-10 pt-16 pb-6">
-  <h2 class="text-[2rem] display">If you want both</h2>
-  <p class="text-[#5A5F4C] mt-3 max-w-[46rem]">
-    Whichever loses here does not go to waste. The truck is the natural opener for a gallery
-    or an about section, and the hall is already doing work further down the page. There is
-    also the option of rotating the hero seasonally, since the truck is spring and summer and
-    the hall is an evening in autumn.
+  <hr class="rule mb-10">
+  <h2 class="text-[2rem] display">One thing worth knowing</h2>
+  <p class="note mt-3 max-w-[46rem]">
+    The ceremony photograph is a phone picture, 1440 pixels wide. Stretched across a desktop
+    screen that is exactly its full size with nothing in reserve, so it will look a little
+    soft on a modern laptop. The professional photographs are four times larger. If the
+    ceremony lawn is the shot you want in the hero, it is worth asking the photographer
+    whether they have one of the empty setup.
   </p>
   <div class="mt-8 flex flex-wrap gap-3">
     <a href="index.html" class="btn btn-solid">See the full page</a>
-    <a href="#top" class="btn btn-ghost">Back to the top</a>
   </div>
 </section>
 
