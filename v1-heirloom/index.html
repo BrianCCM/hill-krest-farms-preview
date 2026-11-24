@@ -118,14 +118,16 @@ tailwind.config = {
   /* The photograph gets its own band at the foot of the hero, with real ivory above it.
      Stretched across the whole hero it renders about 0.67x the viewport width tall, which is
      taller than the screen, so the venue can never clear the text. A band fixes that. */
-  .hero-photo{ position:relative; height:clamp(320px, 33vw, 480px); }
+  .hero-photo{ position:relative; height:clamp(320px, 36vw, 520px); }
   /* <picture> is inline by default, so the image has no box to fill without this */
   .hero-photo picture{ display:block; width:100%; height:100%; }
   .hero-photo img{
     display:block; width:100%; height:100%;
-    object-fit:cover; object-position:50% 100%;
+    object-fit:cover; object-position:50% 72%;
   }
-  .hero-photo::after{
+  /* The dusk photo has a dark sky along its top edge, so an ivory fade would only muddy it.
+     The band starts on a clean edge instead. */
+  .hero-photo::after{ display:none;
     content:''; position:absolute; inset:0 0 auto 0; height:14%;
     background:linear-gradient(to bottom,
       #F6F2EA 0%, rgba(246,242,234,.94) 30%, rgba(246,242,234,.66) 55%,
@@ -231,13 +233,13 @@ tailwind.config = {
   <div class="hero-photo rise">
     <picture>
       <source media="(max-width:640px)"
-              srcset="../images/hero-ceremony-mobile-640.webp 640w, ../images/hero-ceremony-mobile.webp 980w"
-              sizes="100vw">
-      <img src="../images/hero-ceremony-1000.webp"
-           srcset="../images/hero-ceremony-700.webp 700w, ../images/hero-ceremony-1000.webp 1000w, ../images/hero-ceremony.webp 1440w"
+              srcset="../images/hero-dusk-700.webp 700w, ../images/hero-dusk-1000.webp 1000w, ../images/hero-dusk.webp 1440w"
+              sizes="160vw">
+      <img src="../images/hero-dusk-1000.webp"
+           srcset="../images/hero-dusk-700.webp 700w, ../images/hero-dusk-1000.webp 1000w, ../images/hero-dusk.webp 1440w"
            sizes="100vw"
-           alt="The ceremony lawn set for a wedding, a draped timber arbor with chairs in two blocks either side of a grass aisle"
-           width="1440" height="572" fetchpriority="high">
+           alt="The red barn at dusk with its doors open and string lights running out across the yard, guests at tables in front"
+           width="1440" height="810" fetchpriority="high">
     </picture>
   </div>
 </section>
@@ -343,7 +345,11 @@ tailwind.config = {
         <dl class="grid sm:grid-cols-2 gap-x-10">
           <div class="py-5 border-t border-line">
             <dt class="h-md">Tables and chairs</dt>
-            <dd class="text-ink-mid mt-2"><span class="tbd">Count and type</span>. Round tables, banquet tables and white folding chairs are on site.</dd>
+            <dd class="text-ink-mid mt-2">Seating for up to 150 guests, with white tablecloths.</dd>
+          </div>
+          <div class="py-5 border-t border-line">
+            <dt class="h-md">Two arbors</dt>
+            <dd class="text-ink-mid mt-2">Both are yours to dress for the ceremony.</dd>
           </div>
           <div class="py-5 border-t border-line">
             <dt class="h-md">Frame tents</dt>
@@ -351,23 +357,31 @@ tailwind.config = {
           </div>
           <div class="py-5 border-t border-line">
             <dt class="h-md">Heat and lighting</dt>
-            <dd class="text-ink-mid mt-2">Patio heaters, string lights through the barn and across the yard, and power at <span class="tbd">locations</span>.</dd>
+            <dd class="text-ink-mid mt-2">Four outdoor patio heaters, plus string lights through the barn and across the yard.</dd>
           </div>
           <div class="py-5 border-t border-line">
+            <dt class="h-md">The bridal suite</dt>
+            <dd class="text-ink-mid mt-2">A spacious room of your own with a kitchenette, its own bathroom, a table to spread out on, and the basic hair and toiletry things people always forget.</dd>
+          </div>
+          <div class="py-5 border-t border-line">
+            <dt class="h-md">The groom's trailer</dt>
+            <dd class="text-ink-mid mt-2">A separate place for the groom and his party to get ready.</dd>
+          </div>
+          <div class="py-5 border-t border-line">
+            <dt class="h-md">Select decorations</dt>
+            <dd class="text-ink-mid mt-2">A selection of the farm's own decor is yours to use.</dd>
+          </div>
+          <div class="py-5 border-t border-line">
+            <dt class="h-md">Your own vendors</dt>
+            <dd class="text-ink-mid mt-2">No vendor restrictions. Bring any caterer, florist, DJ or photographer you like.</dd>
+          </div>
+          <div class="py-5 border-t border-line sm:border-b border-b">
             <dt class="h-md">Parking</dt>
             <dd class="text-ink-mid mt-2">Gravel lot on site for <span class="tbd">vehicle count</span> vehicles.</dd>
           </div>
-          <div class="py-5 border-t border-line">
+          <div class="py-5 border-t border-line sm:border-b border-b">
             <dt class="h-md">Restrooms</dt>
             <dd class="text-ink-mid mt-2"><span class="tbd">Permanent or portable, and how many</span>.</dd>
-          </div>
-          <div class="py-5 border-t border-line">
-            <dt class="h-md">The bridal room</dt>
-            <dd class="text-ink-mid mt-2">A large room of your own with a kitchenette, its own bathroom, a table to spread out on, and the basic hair and toiletry things people always forget.</dd>
-          </div>
-          <div class="py-5 border-t border-line sm:border-b-0 border-b">
-            <dt class="h-md">Catering</dt>
-            <dd class="text-ink-mid mt-2"><span class="tbd">Any caterer, preferred list, or in-house</span>. Prep area: <span class="tbd">what is available</span>.</dd>
           </div>
         </dl>
       </div>
@@ -388,27 +402,27 @@ tailwind.config = {
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line mt-[var(--s-5)] rise border border-line">
       <div class="bg-surface p-8">
-        <p class="display text-[2.75rem] leading-none">$<span class="tbd">0,000</span></p>
-        <p class="text-ink-mid mt-4">Full weekend wedding, <span class="tbd">days and hours</span>.</p>
+        <p class="display text-[2.75rem] leading-none">$3,200</p>
+        <p class="text-ink-mid mt-4">The wedding package, with everything listed above.</p>
       </div>
       <div class="bg-surface p-8">
-        <p class="display text-[2.75rem] leading-none">$<span class="tbd">0,000</span></p>
-        <p class="text-ink-mid mt-4">Single Saturday, <span class="tbd">hours</span>.</p>
+        <p class="display text-[2.75rem] leading-none">$500</p>
+        <p class="text-ink-mid mt-4">Deposit to reserve your date.</p>
       </div>
       <div class="bg-surface p-8">
-        <p class="display text-[2.75rem] leading-none">$<span class="tbd">000</span></p>
-        <p class="text-ink-mid mt-4">Weekday and off-season events.</p>
-      </div>
-      <div class="bg-surface p-8">
-        <p class="display text-[2.75rem] leading-none">100 to 150</p>
+        <p class="display text-[2.75rem] leading-none">Up to 150</p>
         <p class="text-ink-mid mt-4">Guests, across the whole venue.</p>
+      </div>
+      <div class="bg-surface p-8">
+        <p class="display text-[2.75rem] leading-none">10:30 PM</p>
+        <p class="text-ink-mid mt-4">When loud music ends.</p>
       </div>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 lg:gap-12 mt-[var(--s-5)] rise">
       <div>
         <h3 class="h-md">Holding a date</h3>
-        <p class="text-ink-mid mt-3"><span class="tbd-block">Deposit amount, whether it is refundable, and what the balance schedule looks like.</span></p>
+        <p class="text-ink-mid mt-3">A $500 deposit reserves your date. <span class="tbd">Whether it is refundable, and when the balance is due</span>.</p>
       </div>
       <div>
         <h3 class="h-md">If it rains</h3>
@@ -416,7 +430,7 @@ tailwind.config = {
       </div>
       <div>
         <h3 class="h-md">House rules</h3>
-        <p class="text-ink-mid mt-3"><span class="tbd-block">Music curfew, open flame, sparklers, decor limits, clean-up and insurance.</span></p>
+        <p class="text-ink-mid mt-3">Start decorating at 4 PM the day before, and come back the day after to clean up if you need to. Loud music ends at 10:30 PM. <span class="tbd">Open flame, sparklers and insurance</span>.</p>
       </div>
     </div>
   </div>
